@@ -1,0 +1,268 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Noto Sans';
+	font-size: 21px;
+	font-weight: 400;
+}
+
+.container {
+	margin: 30px;
+	background-color: #999;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+}
+
+/*-----------------------------------------------------------------------------*/
+/*------------------------bloque superior--------------------------------------*/
+/*-----------------------------------------------------------------------------*/
+
+.top-box { 
+	display: flex;
+	flex-wrap: nowrap; 
+	align-items: center; 
+	position: sticky;
+	height: 50px; 
+	background-color: rgb(0, 127, 106); 
+	padding: 0 20px;
+ 	border-radius: 5px 5px 0 0;
+	transition: filter 0.3s;
+}
+
+.top-box h1 {
+	color: #fff;
+}
+
+.profile {
+	border-radius: 100%;
+	width: 35px;
+	height: 35px;
+	margin-right: 10px;
+	background-color: #222;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.name-options {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.options-container {
+	display: flex;
+	flex-direction: column;
+	transform: translateY(-5px);
+	cursor: pointer;
+	padding: 8px;
+	user-select: none;
+}
+
+.options-container span {
+	line-height: 8px;
+	color: #fff;
+	font-weight: 800;
+}
+
+#button-checkbox {
+	display: none;
+}
+
+.button-container {
+	position: relative;
+}
+
+.options {
+	max-height: 0;
+	width: 150px;
+	padding: 0 6px;
+	background-color: #fff;
+	position: absolute;
+	overflow: hidden;
+	transition: max-height 0.3s ease-in-out;
+	transform: translate(-108px,5px);
+}
+
+.options h2 {
+	margin: 8px;
+	cursor: pointer;
+}
+.show {
+	max-height: 90px;
+}
+
+/*-----------------------------------------------------------------------------*/
+/*-------------------------------CHAT------------------------------------------*/
+/*-----------------------------------------------------------------------------*/
+
+.chat {
+	background-image: url('fondo-chat.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-top: 10px;
+	transition: filter 0.3s;
+}
+
+.conversation {	
+	height: 70vh;
+	overflow: auto;
+}
+
+.spike-left {
+	position: relative;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-color: #fff;
+	transform: translate(21px, -8px);
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0);
+	z-index: 1;
+}
+
+.spike-right {
+	position: relative;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-color: rgb(226, 255, 199);
+	transform: translate(-21px, 9px);
+	clip-path: polygon(0 0, 100% 0, 0 100%, 0 0);
+	z-index: 1;
+}
+
+.sent {
+	display: flex;
+}
+
+.message {
+	font-weight: 100;
+	border-radius: 15px;
+	padding: 6px 15px;
+	margin: 5px 10px;
+	max-width: 80%;
+	display: inline-block;
+}
+
+.by-me {
+	background-color: rgb(226, 255, 199);
+	margin-left: auto !important;
+}
+
+.by-others {
+	background-color: rgb(255,255,255);
+}
+
+.writing-block {
+	position: sticky;
+}
+
+/*-----------------------------------------------------------------------------*/
+/*------------------------------PERFIL-----------------------------------------*/
+/*-----------------------------------------------------------------------------*/
+
+.profile-interface {
+	width: 400px;
+	max-height: 0;
+	position: absolute;
+	text-align: center;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-items: center;
+	left: 0;
+	right: 0;
+	margin: 65px auto;
+	background-color: #fff;
+	border-radius: 15px;
+	z-index: 100;
+	opacity: 0;
+	transition: opacity 0.7s;
+	box-shadow: 0px 6px 26px -8px #000000;
+}
+
+.blur {
+	filter: blur(5px);
+}
+
+.view {
+	max-height: 600px;
+	opacity: 1;
+}
+
+.picture {
+	position: relative;
+	height: 220px;
+	width: 220px;
+	border-radius: 100%;
+	margin: 30px;
+	margin-top: 10px;
+	background-color: #000;
+	cursor: pointer;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+}
+
+.picture i {
+	position: absolute;
+	left: 62px;
+	bottom: 56px;
+	opacity: 0;
+	color: #fff;
+	font-size: 100px;
+	transition: opacity 0.2s;
+}
+.picture:hover > i {
+	opacity: 1;
+}
+
+.name {
+	font-size: 35px;
+	width: 75%;
+	border-bottom: 3px solid rgb(0, 127, 106);
+	margin-bottom: 45px;
+}
+
+.exit-profile {
+	margin: 4px;
+	margin-left: auto;
+}
+
+.exit-profile:hover {
+	color: red;
+}
+
+.exit-profile i {
+	font-size: 32px;
+}
+/*-----------------------------------------------------------------------------*/
+/*------------------------------INPUT------------------------------------------*/
+/*-----------------------------------------------------------------------------*/
+
+.text-box {
+	padding: 9px 23px;
+	margin: 10px 5px 10px 10px;
+	border-radius: 60px;
+	outline: none;
+	border: none;		
+}
+
+.sendButton {
+	background-color: rgb(0, 127, 106);
+	font-weight: 1000;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	border-radius: 100%;
+	padding: 9px 13px;
+}
+
+.sendButton i {
+	transform: translate(1px,2px);
+}

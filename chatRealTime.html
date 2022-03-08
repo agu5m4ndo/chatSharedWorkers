@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+		<link rel="stylesheet" type="text/css" href="chatRealTimeEstilo.css">
+		<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+		<title>Chat Real Time</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="top-box">
+				<div class="profile"></div> <!--Esto es por ahora, va a ser una imagen-->
+				<div class="name-options">
+					<h1 class="top-name">Nombre</h1>
+					<div>
+						<input type="checkbox" id="button-checkbox">
+						<label for="button-checkbox" class="button-container">
+							<div class="options-container">
+								<span>.</span>
+								<span>.</span>
+								<span>.</span>
+							</div>
+						</label>
+						<div class="options">
+							<h2 class="edit-profile">Perfil</h2>
+							<h2 class="empty-chat">Vaciar chat</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="profile-interface">
+					<span class="exit-profile"><i class='bx bx-x'></i></span> <!--añadir icono de cruz-->
+					<div class="picture">
+						<input type="file" accept="image/png" accept="image/jpg" class="addPicture" style="display: none;"><i class='bx bx-camera'></i></input>
+					</div>
+					
+					<h2 class="name" contenteditable>Nombre	</h2>
+					<!-- <button class="edit-name"><i class='bx bx-pencil' ></i></button> añadir icono de lapicito--> 
+				</div>
+			<div class="chat">
+				<div class="conversation"></div>
+				<div class="writing-block">
+					<input type="text" class="text-box" placeholder="Escribe un mensaje"></input>
+					<button class="sendButton"><i class='bx bxs-send' ></i></button>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="chatRealTimeBackend.js"></script>
+	</body>
+</html>
